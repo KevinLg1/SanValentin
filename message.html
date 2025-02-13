@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mensaje de Amor</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Estilos personalizados -->
+  <style>
+    body {
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+      position: relative;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+    .love-message {
+      margin-top: 80px;
+      text-align: center;
+      color: #000;
+      z-index: 2;
+      position: relative;
+    }
+    .kuromi-style {
+      color: #FF69B4;
+      text-shadow: 2px 2px #000;
+    }
+    /* Estilos para el carrusel */
+    .carousel-item img {
+      max-height: 500px;
+      object-fit: cover;
+      width: 100%;
+    }
+    /* Estilos para los corazones cayendo */
+    .heart {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      color: #FF69B4;
+      animation: fall linear infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Contenedor del mensaje y carrusel -->
+  <div class="container love-message">
+    <h1 class="kuromi-style">Te Amo, mi Vida</h1>
+    <p class="lead">
+      Cada día a tu lado es un regalo. Gracias por llenar mi vida de amor y alegría.
+    </p>
+    
+    <!-- Carrusel de imágenes -->
+    <div id="loveCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Asegúrate de reemplazar las rutas de las imágenes por las tuyas -->
+        <div class="carousel-item active">
+          <img src="kvn.jpg" class="d-block w-100" alt="Recuerdo 1" />
+        </div>
+        <div class="carousel-item">
+          <img src="kvn1.jpg" class="d-block w-100" alt="Recuerdo 2" />
+        </div>
+        <div class="carousel-item">
+          <img src="kvn2.jpg" class="d-block w-100" alt="Recuerdo 3" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#loveCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#loveCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- JavaScript para crear el efecto de corazones cayendo -->
+  <script>
+    // Función que crea un corazón y lo anima
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      // Posición horizontal aleatoria (entre 0 y 100vw)
+      heart.style.left = Math.random() * 100 + 'vw';
+      // Duración de la animación aleatoria (entre 5 y 10 segundos)
+      const duration = Math.random() * 5 + 5;
+      heart.style.animationDuration = duration + 's';
+      // Tamaño aleatorio (entre 20px y 40px)
+      const size = Math.random() * 20 + 20;
+      heart.style.fontSize = size + 'px';
+      // Contenido del corazón (puedes usar el símbolo ♥ o una imagen)
+      heart.textContent = '❤';
+      document.body.appendChild(heart);
+      
+      // Eliminar el corazón una vez finalizada la animación
+      setTimeout(() => {
+        heart.remove();
+      }, duration * 1000);
+    }
+    
+    // Crear corazones a intervalos regulares (cada 500ms)
+    setInterval(createHeart, 500);
+  </script>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

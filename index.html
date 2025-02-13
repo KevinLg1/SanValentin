@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te amo My Love❤️</title>
+    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background: linear-gradient(45deg, #f48fbc, #a72de9);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .kuromi-theme {
+            color: #3b064d;
+            font-family: 'Pacifico', cursive;
+        }
+
+        .texto {
+            color: #320042;
+            font-family:cursive;
+        }
+        .texto2 {
+            color: #7007cc;
+            font-family:cursive;
+            text-align: center;
+            font-size: 25px;
+        }
+        #page1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .heart-btn {
+            background: #58037c;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 30px;
+            border: none;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        .heart-btn:hover {
+            transform: scale(1.1);
+            background: #4a148c;
+        }
+
+        .heart {
+            position: fixed;
+            top: -10%;
+            color: #ff4081;
+            animation: fall 3s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(-10vh) rotate(0deg); }
+            100% { transform: translateY(110vh) rotate(360deg); }
+        }
+
+        #page2 {
+            display: none;
+            min-height: 100vh;
+            padding: 50px 0;
+        }
+
+        .carousel-item img {
+            height: 70vh;
+            max-height: 500px;
+            min-height: 300px;
+            width: auto;
+            margin: 0 auto;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 3px solid #8b0279;
+        }
+
+        .modal-carta {
+            background: rgba(236, 188, 188, 0.95);
+            border-radius: 20px;
+            border: 3px solid #d50883;
+        }
+
+        .modal-flores {
+            background-image: url('kuromim.png');
+            background-size: 100%;
+            opacity:0.3;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .btn-mensaje {
+            animation: pulse 2s infinite;
+            margin-top: 10px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .modal-content {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 8%;
+            background: rgba(156, 80, 157, 0.2);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Página 1 -->
+    <div id="page1">
+        <div class="kuromi-ears">
+            <i class="fas fa-hat-wizard"></i> ❤️ <i class="fas fa-moon"></i>
+        </div>
+        <h1 class="kuromi-theme display-4 mb-4">¡Hola mi Amor Mi WaWis Bella Divina Hermonsa 😍!</h1>
+        <p class="lead mb-4">¿Me harías el honor de ser tu San Valentín Amor Mio?</p>
+        <button class="heart-btn" onclick="showPage2()">
+            <i class="fas fa-heart"></i> ¡Claro que sí!
+        </button>
+    </div>
+
+    <!-- Página 2 -->
+    <div id="page2">
+        <div class="container">
+            <h1 class="kuromi-theme text-center mb-5">Nuestas imagenes de como empezamos amor ❤️</h1>
+            
+            <!-- Carrusel corregido -->
+            <div id="loveCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-touch="true">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="1.jpeg" class="d-block w-100" alt="Nuestra foto 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="kvn.jpg" class="d-block w-100" alt="Nuestra foto 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="3.jpeg" class="d-block w-100" alt="Nuestra foto 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="4.jpeg" class="d-block w-100" alt="Nuestra foto 4">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="5.jpeg" class="d-block w-100" alt="Nuestra foto 5">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="6.jpeg" class="d-block w-100" alt="Nuestra foto 6">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="i1.jpg" class="d-block w-100" alt="Nuestra foto 7">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="i2.jpg" class="d-block w-100" alt="Nuestra foto 8">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="9.jpeg" class="d-block w-100" alt="Nuestra foto 9">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="10.jpeg" class="d-block w-100" alt="Nuestra foto 10">
+                    </div>
+                </div>
+                
+                <!-- Controles del carrusel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#loveCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#loveCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+
+            <!-- Botón para abrir modal -->
+            <div class="text-center">
+                <button class="heart-btn btn-mensaje" data-bs-toggle="modal" data-bs-target="#loveModal">
+                    ❤️ Preciona para ver mi Testamento 😊🥰❤️
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de la carta -->
+    <div class="modal fade" id="loveModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-carta">
+                <div class="modal-flores"></div>
+                <div class="modal-body position-relative">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    <h2 class="kuromi-theme text-center">Para mi Amor...</h2>
+                    <div class="love-letter">
+                      <p class="texto">Buenos días, buenas tardes, buenas noches, mi amor, mi Kuromi bella y hermosa...
+                        En esta ocasión te escribo porque llegó el 14 de febrero, el día del amor y la amistad, y no puedo dejar pasar la oportunidad de decirte lo agradecido que estoy por estos 6 meses maravillosos que me has regalado. Todavía recuerdo cuando me diste la oportunidad de entrar en tu vida, y cada día desde entonces ha sido un regalo para mi anticucho, mi kokoro, jejeje.
+                        Mi amor, gracias por cada sonrisa que alegra mis días, por cada palabra que me da paz y por cada abrazo que me hace sentir mu feliz de estar a tu lado. Tú eres la razón por la que cada mañana despierto con una felicidad enrme por que se tu estas a mi lado, y la persona con quien quiero compartir mis alegrías, mis sueños y cada momento de felicidad que la vida nos regale.
+                        Recuerda que tu siempre eres mi presente y mi futuro, la compañera que siempre imaginé, y hoy quiero recordarte lo mucho que valoro todo lo que haces por mí. En estos meses me has enseñado lo bonito que es confiar, respetar y amar de verdad, y me has demostrado que, con la persona correcta, todo es posible.
+                        Mi Kuromi hermosa, quiero que sepas que mi único deseo es verte sonreír, que seas feliz y que cada día te sientas amada. Gracias por la oportunidad que me diste hace 6 meses de estar a tu lado, por creer en este amor y por hacerme sentir que juntos podemos con todo.
+                        Te amo mucho mucho mi amor y prometo seguir cuidándote, respetándote y haciéndote feliz, porque eres lo mejor que me ha pasado. Feliz 14 de febrero, mi amor. Espero que este día sea tan especial para ti como lo es para mí, porque ahora puedo celebrarlo contigo.
+                        </p>
+                        <p class="texto2">TE AMO MY LOVE MI KUROMI MI WAWIS HERMOSA PRECIOSA DIVINA 😍🥰😘🖤🫶</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="musica" loop>
+        <source src="zoe.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5
+    </audio>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function showPage2() {
+            $('#page1').fadeOut(800, () => {
+                $('#page2').fadeIn(1000);
+                startHearts();
+                document.getElementById('musica').play();
+            });
+        }
+
+        // Inicializar carrusel con configuración mejorada
+        const myCarousel = new bootstrap.Carousel('#loveCarousel', {
+            interval: 5000,
+            wrap: true,
+            touch: true
+        });
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerHTML = '🖤❤️‍🔥';
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            document.body.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 5000);
+        }
+        
+
+        function startHearts() {
+            setInterval(createHeart, 300);
+        }
+
+        startHearts();
+    </script>
+</body>
+</html>
