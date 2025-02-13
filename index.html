@@ -58,7 +58,7 @@
 
         .heart-btn:hover {
             transform: scale(1.1);
-            background: #4a148c;
+            background: #8262a9;
         }
 
         .heart {
@@ -81,7 +81,7 @@
         }
 
         .carousel-item img {
-            height: 70vh;
+            height: 80vh;
             max-height: 500px;
             min-height: 300px;
             width: auto;
@@ -106,17 +106,17 @@
             height: 100%;
             pointer-events: none;
         }
-
-           .btn-mensaje {
+        .btn-mensaje {
         margin-top: 10px;
-        animation: subtle-pulse 4s infinite;
+        transition: all 0.3s ease; /* Transición suave para el hover */
     }
 
-    @keyframes subtle-pulse {
-        0% { opacity: 0.95; }
-        50% { opacity: 1; transform: scale(1.02); }
-        100% { opacity: 0.95; }
+    /* ANIMACIÓN SOLO AL HACER HOVER */
+    .btn-mensaje:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
     }
+
         .modal-content {
             position: relative;
             overflow: hidden;
@@ -147,6 +147,7 @@
     <!-- Página 2 -->
     <div id="page2">
         <div class="container">
+            <h1 class="kuromi-theme text-center mb-5">GRACIAS POR SER MI SAN VALENTIN MI AMOR TE AMO🫶❤️🥰</h1>
             <h1 class="kuromi-theme text-center mb-5">Nuestas imagenes de como empezamos amor ❤️</h1>
             
             <!-- Carrusel corregido -->
