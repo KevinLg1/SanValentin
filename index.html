@@ -107,17 +107,16 @@
             pointer-events: none;
         }
 
-        .btn-mensaje {
-            animation: pulse 2s infinite;
-            margin-top: 10px;
-        }
+           .btn-mensaje {
+        margin-top: 10px;
+        animation: subtle-pulse 4s infinite;
+    }
 
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
+    @keyframes subtle-pulse {
+        0% { opacity: 0.95; }
+        50% { opacity: 1; transform: scale(1.02); }
+        100% { opacity: 0.95; }
+    }
         .modal-content {
             position: relative;
             overflow: hidden;
